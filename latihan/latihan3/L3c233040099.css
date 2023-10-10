@@ -1,0 +1,43 @@
+body {
+    background-color: aqua;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-family: Comic Sans Ms;
+    font-size: 60px;
+    color: darkblue;
+    text-align: center;
+}
+
+h4 {
+    text-align: right;
+    font-style: italic;
+}
+
+p {
+    text-align: justify;
+}
+
+.a1 {
+    color: white;
+    font-variant-caps: petite-caps;
+  }
+
+  .p1 {
+    color: orange;
+    text-align: center;
+  }
+
+  .p2 {
+    text-align: right;
+  }
+
+  .a1:hover {
+    color: red;
+  }
+
+  .a2:hover {
+    color: white;
+    background-color: blue;
+  }

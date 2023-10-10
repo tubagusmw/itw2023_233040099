@@ -1,21 +1,49 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Tabel</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 2a Dzaki</title>
+    <style>
+      table {
+        background-color: lightblue;
+      }
+    </style>
   </head>
   <body>
-    <table
-      align="center"
-      bgcolor="lightblue"
-      border="1"
-      cellspacing="5"
-      cellpadding="10"
-    >
+    <table border="1" width="40%" cellpadding="5" cellspacing="5">
       <tr>
-        <td colspan="6" align="center"><strong>Data Mahasiswa</strong></td>
+        <td colspan="6" align="center"><b>Data Mahasiswa</b></td>
       </tr>
       <tr>
-        <td>ghi</td>
-        <td>jkl</td>
+        <td rowspan="2" align="center"><b>No.</b></td>
+        <td rowspan="2" align="center"><b>NRP</b></td>
+        <td colspan="2" align="center"><b>Nama</b></td>
+        <td rowspan="2" align="center"><b>Alamat</b></td>
+        <td rowspan="2" align="center"><b>No.HP</b></td>
+      </tr>
+      <tr>
+        <td><b>Nama Depan</b></td>
+        <td><b>Nama Belakang</b></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>233040099</td>
+        <td>Tubagus Muhammad</td>
+        <td>Wildan</td>
+        <td>Sarijadi</td>
+        <td>085156994409</td>
+      </tr>
+      <tr>
+        <td rowspan="2">2</td>
+        <td rowspan="2">13345076</td>
+        <td rowspan="2">Geto</td>
+        <td rowspan="2">Suguru</td>
+        <td rowspan="2">Tokyo</td>
+        <td>08123456789</td>
+      </tr>
+      <tr>
+        <td>0897654321</td>
       </tr>
     </table>
   </body>

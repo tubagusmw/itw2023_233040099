@@ -1,0 +1,833 @@
+<html>
+
+<head>
+	<title>Modul Latihan 3 | CSS Dasar</title>
+	<style>
+		body {
+			font-family: verdana;
+		}
+
+		h3 {
+			color: #3366FF;
+		}
+
+		font.tugas {
+			color: #ff3300;
+		}
+
+		font.tugas-ket {
+			color: #ff0000;
+			font-size: 18px;
+		}
+
+		.tugas-ket2 {
+			color: #CC0000;
+			font-size: 22px;
+			font-style: italic;
+			font-weight: bold;
+			text-decoration: underline;
+		}
+
+		.ket {
+			font-size: 10pt;
+		}
+
+		.code {
+			background: #eeeeee;
+			padding: 4px;
+			font-family: "courier new";
+			font-size: 11px;
+		}
+
+		a:link {
+			color: #004789;
+			text-decoration: none;
+		}
+
+		a:visited {
+			color: #004789;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #0370d6;
+			text-decoration: underline;
+		}
+
+		a:active {
+			color: #0370d6;
+			text-decoration: none;
+		}
+
+		blockquote {
+			font: 14px/22px normal helvetica, sans-serif;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-left: 50px;
+			padding-left: 15px;
+			border-left: 3px solid #ccc;
+		}
+	</style>
+</head>
+
+<body>
+	<table width="100%" bgcolor="#ffffff" cellpadding="10">
+		<tr>
+			<td class="ket">
+				<font size="5"><b>Modul Latihan 3 | CSS Dasar</b></font>
+				<br>
+				<p>@sandhikagalih | Teknik Informatika UNPAS</p>
+				<hr>
+			</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<h3 id="css">CSS</h3>
+				<p>Adalah Sebuah script yang dapat mengatur dan mengontrol tampilan halaman web serta memisahkan antara tampilan
+					dan konten halaman web.</p>
+				<p>
+					Berikut adalah salah satu contoh pemanfaatan CSS dalam membuat sebuah animasi sederhana.
+				</p>
+				<img src="images/case1.gif" alt="Case">
+			</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<h3 id="struktur">Struktur Penulisan CSS</h3>
+				<p>Dalam menggunakan CSS terdapat struktur yang harus anda ikuti, struktur ini digunakan agar browser mengerti
+					apa yang anda ketikan. Berikut ini adalah struktur penulisan sebuah script CSS.</p>
+				<img src="images/1.jpg"><br>
+			</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<h3 id="akses">akses CSS</h3>
+				ada 3 cara mengakses CSS yaitu <br>
+				<ol>
+					<li><b>Inline</b><br>
+						<br>Style CSS digunakan langsung di dalam tag HTML<br>
+						<img src="images/2.jpg"><br><br><br>
+
+					<li><b>Internal Link</b>
+						<br>Style CSS diletakkan di halaman HTML. Biasanya terdapat di dalam tag &lt;head&gt;<br>
+						<img src="images/3.jpg"><br><br></br>
+
+					<li><b>Eksternal Link</b><br>
+						<br>Semua deklarasi disatukan dalam satu file *.css. Cara memanggil file css di dalam html :
+						<br><br>
+						<div class="code">
+							&lt;link rel=stylesheet type="text/css" href="style.css"&gt;
+						</div><br>
+						baris tersebut disimpan di dalam tag head.<br>
+						<img src="images/4.jpg"><br><br>
+						Lalu script css dibuat di file lain yang dipanggil oleh file htmlnya. Contoh isi dari file css tersebut
+						adalah sebagai berikut:
+						<img src="images/5.jpg"><br><br></br>
+				</ol>
+
+			</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<h3 id="classid">Class-Id</h3>
+				Setiap style css dibedakan berdasarkan selectornya. Terdapat dua selector yaitu class dan id.
+				<ul>
+					<li>class
+						<p>Class ditandai dengan menggunakan tanda titik '.' sebelum nama selector</p>
+						<p>
+							<font color="#006600">.[Class Name] {
+								<br> &nbsp; property:value;
+								<br> &nbsp; ...
+								<br>}
+							</font>
+						</p>
+						<p><b>contoh :</b></p>
+						<div class="code">
+							.merah {
+							<br> color:red;
+							<br>}
+						</div>
+						<p><b>Panggil selector :</b></p>
+
+						<div class="code">
+							&lt;p class="merah"&gt;Ini contoh penggunaan selector class.&lt;/p&gt;
+						</div>
+						</p>
+
+						<p><b>Multiple Classes</b>
+							<br><br>Penggunaan class yang lebih dari satu pada saat pemanggilan.
+						<div class="code">
+							<p>.rataKanan {
+								<br> &nbsp; text-align:right;
+								<br>}
+							</p>
+							<p>.warnaMerah {
+								<br> &nbsp; color:red;
+								<br>}
+							</p>
+						</div>
+						<p>Pemanggilan di HTML</p>
+						<div class="code">
+							<p>&lt;p class="rataKanan warnaMerah"&gt;ini contoh pemanggilan kelas lebih dari satu.&lt;/p&gt;
+							</p>
+						</div>
+
+						</p>
+						<p>Contoh hasilnya:</p>
+						<img src="images/6.png"><br><br>
+					</li>
+					<li>id
+						<p>Penggunaan id ditandai dengan memakai tanda '#'. Syntax nya :</p>
+						<p>
+							<font color="#006600">#[ID Name] {
+								<br> &nbsp; property:value;
+								<br> &nbsp; ...
+								<br>}
+							</font>
+						</p>
+						<p><b>contoh :</b></p>
+						<div class="code">
+							<p>#footer {
+								<br> color:blue;
+								<br>}
+							</p>
+						</div>
+
+						<p>
+							Pemanggilan di HTML
+						</p>
+
+						<div class="code">
+							<p>&lt;p id="footer"&gt;Berikut ini contoh penggunaan selector id.&lt;/p&gt;</p>
+						</div><br>
+						<p>Contoh hasilnya:</p>
+						<img src="images/9.png"><br><br></br>
+					</li>
+
+					<li>Class Vs Id
+						<p>Id selector hanya dapat digunakan sekali pada saat pemanggilan di HTML. Class Selector dapat dipanggil
+							berkali-kali di HTML. Perbedaan lain adalah, id selector dapat dipanggil oleh fungsi Javascript
+							getElementById(). Akan dijelaskan pada pertemuan tentang JavaScript.</p>
+				</ul>
+
+			</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<h3 id="text">CSS Text</h3>
+				Digunakan untuk memanipulasi <strong>tulisan</strong> pada Halaman web.<br>
+				Pelajari Property &amp; Value pada CSS Text pada tabel di bawah ini:
+
+				<!-- TEXT -->
+				<BR><BR>
+				<TABLE style="font-size: 10pt" border="1" cellspacing="1" id="AutoNumber12" width="640">
+					<TR>
+						<TD align="center" width="200"><B>Property</B></TD>
+						<TD align="center" width="281"><B>Deskripsi</B></TD>
+						<TD align="center" width="204"><B>Values</B></TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">color</TD>
+						<TD width="256" valign="top">menentukan warna
+							text</TD>
+						<TD width="184" valign="top"><I>color</I></TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">direction</TD>
+						<TD width="256" valign="top">menentukan arah
+							text</TD>
+						<TD width="184" valign="top"><U>ltr</U><BR>
+							rtl</TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">letter-spacing</TD>
+						<TD width="256" valign="top">menentukan spasi
+							antar character dalam text</TD>
+						<TD width="184" valign="top"><U>normal</U><BR>
+							<I>length</I>
+						</TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">text-align</TD>
+						<TD width="256" valign="top">mengatur
+							alignment text dalam suatu element</TD>
+						<TD width="184" valign="top">left<BR>
+							right<BR>
+							center<BR>
+							justify</TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">line-height</TD>
+						<TD width="256" valign="top">menentukan spasi
+							antar baris dalam sebuah paragraf</TD>
+						<TD width="184" valign="top"><U>normal</U><BR>
+							<I>length</I>
+						</TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">text-decoration</TD>
+						<TD width="256" valign="top">memberi dekorasi
+							pada text</TD>
+						<TD width="184" valign="top"><U>none</U><BR>
+							underline<BR>
+							overline<BR>
+							line-through<BR>
+							blink</TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">text-indent</TD>
+						<TD width="256" valign="top">memberi indent
+							pada baris pertama text dalam suatu element</TD>
+						<TD width="184" valign="top"><I>length<BR>
+								%</I></TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">text-transform</TD>
+						<TD width="256" valign="top">mengatur huruf
+							dalam element</TD>
+						<TD width="184" valign="top"><U>none</U><BR>
+							capitalize<BR>
+							uppercase<BR>
+							lowercase</TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">white-space</TD>
+						<TD width="256" valign="top">mengatur
+							bagaimana whitespace dalam element</TD>
+						<TD width="184" valign="top"><U>normal</U><BR>
+							pre<BR>
+							nowrap</TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">word-spacing</TD>
+						<TD width="256" valign="top">menentukan spasi
+							antar kata</TD>
+						<TD width="184" valign="top"><U>normal</U><BR>
+							<I>length</I>
+						</TD>
+					</TR>
+				</TABLE>
+			</td>
+		</tr>
+		<tr>
+			<td height="200px">
+				<br>
+			</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<h3>CSS Font</h3>
+				Digunakan untuk memanipulasi <strong>huruf</strong> pada Halaman web.<br>
+				Pelajari Property &amp; Value pada CSS Font pada tabel di bawah ini:
+
+				<!-- FONT -->
+				<br><br>
+				<TABLE style="font-size: 10pt" border="1" cellspacing="1" id="AutoNumber6" width="635">
+					<TR>
+						<TD align="center" width="181"><B>Property</B></TD>
+						<TD align="center" width="260"><B>Deskripsi</B></TD>
+						<TD align="center" width="173"><B>Values</B></TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">font</TD>
+						<TD width="261" valign="top">mengatur semua
+							property font dengan 1 deklarasi</TD>
+						<TD width="174" valign="top"><I>
+								<A href="#property_font-style">font-style</A><BR>
+								<A href="#property_font-variant">font-variant</A><BR>
+								<A href="#property_font-weight">font-weight</A><BR>
+								<A href="#property_font-size">font-size</A>/<A href="#property_line-height">line-height</A><BR>
+								<A href="#property_font-family">font-family</A></I><BR>
+							caption<BR>
+							icon<BR>
+							menu<BR>
+							message-box<BR>
+							small-caption<BR>
+							status-bar</TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">
+							<A name="property_font-family"></A>font-family
+						</TD>
+						<TD width="261" valign="top">list prioritas
+							nama font family dan/atau nama family yg generik untuk suatu element</TD>
+						<TD width="174" valign="top"><I>family-name<BR>
+								generic-family</I></TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">
+							<A name="property_font-size"></A>font-size
+						</TD>
+						<TD width="261" valign="top">menentukan ukuran
+							font</TD>
+						<TD width="174" valign="top">xx-small<BR>
+							x-small<BR>
+							small<BR>
+							<U>medium</U><BR>
+							large<BR>
+							x-large<BR>
+							xx-large<BR>
+							smaller<BR>
+							larger<BR>
+							<I>length<BR>
+								%</I>
+						</TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">
+							<A name="property_font-style"></A>font-style
+						</TD>
+						<TD width="261" valign="top">menentukan style
+							font</TD>
+						<TD width="174" valign="top"><U>normal</U><BR>
+							italic<BR>
+							oblique</TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">
+							<A name="property_font-variant"></A>font-variant
+						</TD>
+						<TD width="261" valign="top">menampilkan text
+							dalam small-caps font (huruf kecil) atau normal font</TD>
+						<TD width="174" valign="top"><U>normal</U><BR>
+							small-caps</TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">
+							<A name="property_font-weight"></A>font-weight
+						</TD>
+						<TD width="261" valign="top">menentukan bobot
+							dari font</TD>
+						<TD width="174" valign="top"><U>normal</U><BR>
+							bold<BR>
+							bolder<BR>
+							lighter<BR>
+							100<BR>
+							200<BR>
+							300<BR>
+							400<BR>
+							500<BR>
+							600<BR>
+							700<BR>
+							800<BR>
+							900</TD>
+					</TR>
+				</TABLE>
+			</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<h3>CSS List &amp; Marker</h3>
+				Digunakan untuk memanipulasi <strong>list</strong> pada Halaman web.<br>
+				Pelajari Property &amp; Value pada CSS List &amp; Marker pada tabel di bawah ini:
+				</li>
+				<!-- List & Marker -->
+				<br><br>
+				<TABLE style="font-size: 10pt" border="1" cellspacing="1" id="AutoNumber7" width="636">
+					<TR>
+						<TD align="center" width="181"><B>Property</B></TD>
+						<TD align="center" width="260"><B>Deskripsi</B></TD>
+						<TD align="center" width="173"><B>Values</B></TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">list-style</TD>
+						<TD width="261" valign="top">mengatur semua
+							property list dalam 1 deklarasi</TD>
+						<TD width="175" valign="top"><I>
+								<A href="#property_list-style-type">list-style-type</A><BR>
+								<A href="#property_list-style-position">list-style-position</A><BR>
+								<A href="#property_list-style-image">list-style-image</A></I></TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">
+							<A name="property_list-style-image"></A>list-style-image
+						</TD>
+						<TD width="261" valign="top">menggunakan image
+							sebagai marker list-item</TD>
+						<TD width="175" valign="top"><U>none</U><BR>
+							<I>url</I>
+						</TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">
+							<A name="property_list-style-position"></A>list-style-position
+						</TD>
+						<TD width="261" valign="top">menentukan dimana
+							marker list-item ditempatkan di list</TD>
+						<TD width="175" valign="top"><U>outside</U><BR>
+							inside</TD>
+					</TR>
+					<TR>
+						<TD width="182" valign="top">
+							<A name="property_list-style-type"></A>list-style-type
+						</TD>
+						<TD width="261" valign="top">menentukan tipe
+							marker list-item</TD>
+						<TD width="175" valign="top"><U>disc</U><BR>
+							circle<BR>
+							square<BR>
+							decimal<BR>
+							decimal-leading-zero<BR>
+							lower-roman<BR>
+							upper-roman<BR>
+							lower-greek<BR>
+							lower-alpha<BR>
+							lower-latin<BR>
+							upper-alpha<BR>
+							upper-latin<BR>
+							hebrew<BR>
+							armenian<BR>
+							georgian<BR>
+							cjk-ideographic<BR>
+							hiragana<BR>
+							katakana<BR>
+							hiragana-iroha<BR>
+							none</TD>
+					</TR>
+				</TABLE>
+			</td>
+		</tr>
+		<tr>
+			<td height="100px">
+				<br>
+			</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<h3 id="background">CSS Background</h3>
+				Digunakan untuk memanipulasi <strong>Background</strong> pada Halaman web.<br>
+				Pelajari Property &amp; Value pada CSS Background pada tabel di bawah ini:
+				</li>
+				<!-- Background -->
+				<br><br>
+				<TABLE style="font-size: 10pt" border="1" cellspacing="1" id="AutoNumber2" width="630">
+					<TR>
+						<TD width="181" align="center"><B>Property</B></TD>
+						<TD width="260" align="center"><B>Deskripsi</B></TD>
+						<TD width="171" align="center"><B>Values</B></TD>
+					</TR>
+					<TR>
+						<TD width="181" valign="top">background</TD>
+						<TD width="260" valign="top">mengatur semua property
+							background dengan 1 deklarasi</TD>
+						<TD width="171" valign="top"><I>
+								<A href="#property_background-color">background-color</A><BR>
+								<A href="#property_background-image">background-image</A><BR>
+								<A href="#property_background-repeat">background-repeat</A><BR>
+								<A href="#property_background-attachment">background-attachment</A><BR>
+								<A href="#property_background-position">background-position</A></I></TD>
+					</TR>
+					<TR>
+						<TD width="181" valign="top">
+							<A name="property_background-attachment"></A>background-attachment
+						</TD>
+						<TD width="260" valign="top">mengatur apakah background
+							image fixed atau scroll dengan bagian page yang lain</TD>
+						<TD width="171" valign="top"><U>scroll</U><BR>
+							fixed</TD>
+					</TR>
+					<TR>
+						<TD width="181" valign="top">
+							<A name="property_background-color"></A>background-color
+						</TD>
+						<TD width="260" valign="top">mengatur background color dari
+							suatu element</TD>
+						<TD width="171" valign="top"><U>transparent</U><BR>
+							<I>color</I>
+						</TD>
+					</TR>
+					<TR>
+						<TD width="181" valign="top">
+							<A name="property_background-image"></A>background-image
+						</TD>
+						<TD width="260" valign="top">menggunakan image sebagai
+							background</TD>
+						<TD width="171" valign="top"><U>none</U><BR>
+							<I>url</I>
+						</TD>
+					</TR>
+					<TR>
+						<TD width="181" valign="top">
+							<A name="property_background-position"></A>background-position
+						</TD>
+						<TD width="260" valign="top">mengatur posisi pertama dari
+							background image</TD>
+						<TD width="171" valign="top">top left<BR>
+							top center<BR>
+							top right<BR>
+							center left<BR>
+							center center<BR>
+							center right<BR>
+							bottom left<BR>
+							bottom center<BR>
+							bottom right<BR>
+							<I>x-%, y-%<BR>
+								x-pos, y-pos</I>
+						</TD>
+					</TR>
+					<TR>
+						<TD width="181" valign="top">
+							<A name="property_background-repeat"></A>background-repeat
+						</TD>
+						<TD width="260" valign="top">mengatur apakah background
+							image diulang (tile)</TD>
+						<TD width="171" valign="top"><U>repeat</U><BR>
+							repeat-x<BR>
+							repeat-y<BR>
+							no-repeat</TD>
+					</TR>
+				</TABLE>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="ket">
+				<h3 id="pseudo">Pseudo class</h3>
+				<p>syntax pseudo class :</p>
+				<div class="code">
+					<p>selector.class:pseudo-class {property: value}</p>
+				</div>
+				<p>Biasanya pseudo class digunakan untuk memberikan style pada link atau pada elemen ketika akan berinteraksi
+					dengan kursor (mouseover / klik).</p>
+				<div class="code">
+					<p>a:link {color:#FF0000; text-decoration:none;}
+						<br>a:visited {color:#0000FF; text-decoration:none;}
+						<br>a:hover {font-size:20; color:#00FF00; text-decoration:underline;}
+						<br>a:active {color:#FF00FF; text-decoration:underline;}
+					</p>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<a name="dimension">
+					<h3>HTML Block &amp; Element</h3>
+				</a>
+				<strong>HTML Block Elements</strong><br>
+				<p>Block Elemen pada dasarnya sudah memiliki baris baru setelah dan sebelum elemennya.</p>
+				Contoh Elemen: <strong> &lt;h1&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;table&gt; </strong><br><br>
+
+				<strong>HTML Inline Elements</strong><br>
+				<p>Inline Elemen ditampilkan tanpa baris baru pada halaman.</p>
+				Contoh Elemen: <strong> &lt;b&gt;, &lt;td&gt;, &lt;a&gt;, &lt;img&gt; </strong>
+
+				<strong>Mengubah Elemen Block/Inline</strong><br>
+				<p>Sebuah elemen HTML, dapat kita ubah perilakunya dengan menggunakan properti css display.</p>
+				Contoh:<br>
+				<strong> p { display: inline; }</strong> <br>
+				<strong> img { display: block; }</strong>
+			</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<a name="dimension">
+					<h3>HTML &lt;div&gt; &amp; &lt;span&gt;</h3>
+				</a>
+				<strong>HTML &lt;div&gt;</strong><br>
+				<ul>
+					<li>Tag &lt;div&gt; merupakan block elemen pada HTML yang biasa digunakan <strong>sebagai kontainer / wadah
+							dari sekumpulan elemen-elemen HTML lain di dalamnya</strong>. </li>
+					<li>Tag &lt;div&gt; jika digunakan hanya pada HTML, tidak akan memiliki fungsi apa-apa. Kecuali, <strong>hanya
+							sebagai elemen block yang akan menambahkan baris baru pada elemen di dalamnya</strong></li>
+					<li>Jika digunakan bersamaan dengan CSS, Tag &lt;div&gt; dapat berfungsi untuk mengatur style pada sekumpulan
+						elemen HTML yang berada di dalamnya.</li>
+					<li>Penggunaan lain untuk Tag &lt;div&gt; adalah sebagai cara untuk mengatur layout pada halaman.</li>
+				</ul>
+				<br>
+
+				<strong>HTML &lt;span&gt;</strong><br>
+				<ul>
+					<li>Tag &lt;span&gt; merupakan inline elemen pada HTML yang biasa digunakan <strong>sebagai kontainer/ wadah
+							dari teks</strong></li>
+					<li>Tag &lt;span&gt;<strong> tidak menciptakan baris baru</strong> pada elemen di dalamnya.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<a name="dimension">
+					<h3>CSS Dimension</h3>
+				</a>
+				<p>Berfungsi untuk <strong>mengatur ukuran (panjang &amp; lebar) sebuah elemen</strong>.</p>
+				<strong>Terdiri dari :</strong><br>
+				<ul>
+					<li>Width
+					<li>Height
+				</ul>
+				<img src="images/dimensi.jpg"><br>
+				<h3>Untuk belajar lebih lanjut</h3>
+				<p>Bisa dipelajari link berikut : </p>
+				<ul type="1">
+					<li><a href="https://www.youtube.com/playlist?list=PLFIM0718LjIUBrbm6Gdh6k7ZUvPIAZm7p" target="blank">CSS
+							dasar</a></li>
+					<li><a href="https://www.w3schools.com/css/default.asp" target="blank">W3schools</a></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<br><br>
+				<font class="tugas-ket"><strong>Keterangan:</strong>
+					<br>- Buatlah sebuah folder sesuai dengan latihan yang sedang dikerjakan. (cth: latihan3)
+					<br>- Kerjakan semua latihan yang diperintahkan
+					<br>- Beri nama file sesuai ketentuan (cth: <strong>L3a043040023.html</strong> dan
+					<strong>L3a043040023.css</strong>)
+					<br>- Simpan file tersebut di dalam folder latihan yang sesuai
+					<br>- Lihat hasilnya pada browser setiap kali selesai mengerjakan satu latihan & tugas
+					<br>- Lakukan commit, dan push pada repository github kalian masing-masing setelah menyelesaikan semua
+					latihan dan tugas
+			</td>
+		</tr>
+		<tr>
+			<td class="tugas-ket2" id="tugas"> <br><br>Latihan 3a</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<a name="center">
+					<h3>Buat file dengan nama L3a&lt;NRP&gt;.html, lalu copykan script dasar HTML berikut ini ke file HTML kalian:
+					</h3>
+					<pre>
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Latihan 3a - CSS Dasar&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+	&lt;h1&gt;Facebook&lt;/h1&gt;
+	&lt;h4&gt;1 November 2023, Pukul 15.00&lt;/h4&gt;
+	&lt;h3&gt;Oleh: &lt;a href=&quot;http://instagram.com/sandhikagalih&quot;&gt;Sandhika Galih&lt;/a&gt;&lt;/h3&gt;
+
+	&lt;p&gt;
+		Facebook adalah sebuah layanan jejaring sosial yang diluncurkan pada bulan Februari 2004, dimiliki dan dioperasikan oleh Facebook, Inc. Pada September 2012, Facebook memiliki lebih dari satu miliar pengguna aktif, lebih dari separuhnya menggunakan telepon genggam. Pengguna harus mendaftar sebelum dapat menggunakan situs ini. Setelah itu, pengguna dapat membuat profil pribadi, menambahkan pengguna lain sebagai teman, dan bertukar pesan, termasuk pemberitahuan otomatis ketika mereka memperbarui profilnya. Selain itu, pengguna dapat bergabung dengan grup pengguna dengan ketertarikan yang sama, diurutkan berdasarkan tempat kerja, sekolah atau perguruan tinggi, atau ciri khas lainnya, dan mengelompokkan teman-teman mereka ke dalam daftar seperti &quot;Rekan Kerja&quot; atau &quot;Teman Dekat&quot;.
+	&lt;/p&gt;	
+	&lt;p&gt;
+		Facebook didirikan oleh &lt;a href=&quot;http://facebook.com&quot;&gt;Mark Zuckerberg&lt;/a&gt; bersama teman sekamarnya dan sesama mahasiswa Universitas Harvard, Eduardo Saverin, Andrew McCollum, Dustin Moskovitz dan Chris Hughes. Keanggotaan situs web ini awalnya terbatas untuk mahasiswa Harvard saja, kemudian diperluas ke perguruan lain di Boston, Ivy League, dan Universitas Stanford. Situs ini secara perlahan membuka diri kepada mahasiswa di universitas lain sebelum dibuka untuk siswa sekolah menengah atas, dan akhirnya untuk setiap orang yang berusia minimal 13 tahun. Meski begitu, menurut survei Consumer Reports bulan Mei 2011, ada 7,5 juta anak di bawah usia 13 tahun yang memiliki akun Facebook dan 5 juta lainnya di bawah 10 tahun, sehingga melanggar persyaratan layanan situs ini.
+	&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+					<h3>- Buatlah file css dengan nama L3a&lt;NRP&gt;.css, lalu hubungkan ke file html tadi menggunakan tag
+						&lt;link&gt; </h3>
+					<h3>- Ubah nama dan link ke sosial medianya dengan nama dan sosial media kalian masing-masing</h3>
+					<h3>- Isi file CSS nya dengan selector dan property yang menyesuaikan spesifikasi di bawah ini:</h3>
+					<ul>
+						<li>background halaman : aqua</li>
+						<li>ubah semua huruf pada halaman menjadi : Georgia</li>
+						<li>jenis huruf untuk heading 1 : Comic Sans MS</li>
+						<li>ukuran huruf untuk heading 1 : 60px</li>
+						<li>warna huruf untuk heading 1 : darkblue</li>
+						<li>ubah heading 4 menjadi rata kanan</li>
+						<li>ubah heading 4 menjadi cetak miring</li>
+						<li>format setiap paragraf menjadi rata kiri kanan (justify)</li>
+					</ul>
+					<h3>- Sehingga hasilnya seperti ini :</h3>
+					<h3>- Jika spesifikasi tidak sesuai dengan hasil, maka ubah CSSnya agar sama dengan hasil :</h3>
+					<img src="images/hasil_latihan2a.png" width="600">
+					<br>
+					* Baca lagi Referensi untuk melihat properti css yang tersedia.
+					<blockquote>
+						<b>Tips &amp; Trik</b> <br>
+						Jangan Biasakan Menghafal Tag-Tag CSS atau HTML secara langsung. Tapi Biasakan latihan menggunakan
+						tag-tag
+						CSS dan HTML.
+					</blockquote>
+			</td>
+		</tr>
+		<tr>
+			<td class="tugas-ket2"> <br><br>Latihan 3b</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<a name="center">
+					<h3>Modifikasi file html dan css pada latihan 3a, simpan dengan nama :</h3>
+					<font class="tugas">L3b&lt;NRP&gt;.html</font><br>
+					<font class="tugas">L3b&lt;NRP&gt;.css</font><br>
+					<h3>Lakukan modifikasi (ubah/tambahkan) pada kode HTML / CSS sehingga menghasilkan tampilan seperti di bawah :
+						<h3>Silahkan cari sendiri kira-kira property dan value apa yang harus dituliskan agar hasilnya sama
+						</h3>
+						<img src="images/hasil_latihan2b.png" width="600">
+						<br>
+						*Buka lagi bagian Referensi untuk melihat properti css yang tersedia. <a
+							href="modul3-reference.html">Halaman
+							Referensi</a>
+						<blockquote>
+							<b>Tips &amp; Trik</b> <br>
+							Jangan Biasakan Menghafal Tag-Tag CSS atau HTML secara langsung. Tapi Biasakan latihan menggunakan tag-tag
+							CSS dan HTML.
+						</blockquote>
+			</td>
+		</tr>
+		<tr>
+			<td class="tugas-ket2"> <br><br>Latihan 3c</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<a name="center">
+					<h3>modifikasi file html dan css pada latihan 3b, simpan dengan nama :</h3>
+					<font class="tugas">L3c&lt;NRP&gt;.html</font><br>
+					<font class="tugas">L3c&lt;NRP&gt;.css</font><br>
+					<h3>Lakukan modifikasi (ubah/tambahkan) pada kode HTML / CSS sehingga menghasilkan tampilan seperti ini :</h3>
+					<a href="https://drive.google.com/file/d/11x56Wh7vNkzTSvRmX4lpcmvENyqcFcYb/view?usp=sharing" target="_blank">
+						<h4>&gt;&gt; download contoh hasil &lt;</h4>
+					</a>
+					<br>
+					*Buka lagi bagian Referensi untuk melihat properti css yang tersedia. <a href="modul3-reference.html">Halaman
+						Referensi</a>
+					<blockquote>
+						<b>Tips &amp; Trik</b> <br>
+						Jangan Biasakan Menghafal Tag-Tag CSS atau HTML secara langsung. Tapi Biasakan latihan menggunakan tag-tag
+						CSS dan HTML.
+					</blockquote>
+
+			</td>
+		</tr>
+		<tr>
+			<td class="tugas-ket2"> <br><br>Latihan 3d</td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<a name="center">
+					<h3>modifikasi file html dan css pada latihan 3c, simpan dengan nama :</h3>
+					<font class="tugas">L3d&lt;NRP&gt;.html</font><br>
+					<font class="tugas">L3d&lt;NRP&gt;.css</font><br>
+					<h4>download gambar berikut ini sebagai background, lalu simpan didalam folder 'img' : <a
+							href="https://drive.google.com/file/d/1uLPNbcX-oqw5cNqTOFi5l-cYUwBSkxSt/view?usp=sharing"
+							target="_blank">&lt;background image&gt;</a></h4>
+					<h3>Lakukan modifikasi (ubah/tambahkan) pada kode HTML / CSS sehingga menghasilkan tampilan seperti ini :</h3>
+					<img src="images/hasil_latihan2d.png" width="600">
+					<br>
+					*Buka lagi bagian Referensi untuk melihat properti css yang tersedia. <a href="modul3-reference.html">Halaman
+						Referensi</a>
+					<blockquote>
+						<b>Tips &amp; Trik</b> <br>
+						Jangan Biasakan Menghafal Tag-Tag CSS atau HTML secara langsung. Tapi Biasakan latihan menggunakan tag-tag
+						CSS dan HTML.
+					</blockquote>
+			</td>
+		</tr>
+
+		<!-- footer -->
+		<tr>
+			<td>
+				<hr>
+				<font color="#FF0000" size="+1">
+					<h4>Keterangan Pengiriman Tugas</h4>
+					<ul>
+						<li>Semua file latihan dan tugas akan dikumpulkan dan dikirimkan melalui repository di akun github kalian
+							masing-masing</strong>
+						</li>
+						<li>Kumpulkan URL tugas dari commit terakhir di repository kalian
+						</li>
+					</ul>
+				</font>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<br>
+
+</body>
+
+</html>

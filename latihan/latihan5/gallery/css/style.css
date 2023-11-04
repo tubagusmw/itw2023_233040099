@@ -20,8 +20,9 @@
     font-size: 80px;
     margin: 50px 0;
     text-align: center;
-    text-shadow: 1px 1px 1px white;
+    text-shadow: 5px 5px 1px black;
     font-family: 'Valorant', sans-serif;
+    color: white;
   }
   
   .container {

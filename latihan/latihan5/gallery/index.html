@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Agent Valorant</h1>
+
+    <div class="container">
+      <ul class="gallery">
+        <li>
+          <a href="#yoru">
+            <img src="img/thumbs/yoru.png" alt="YORU" class="yoru" />
+            <span>YORU</span>
+          </a>
+
+          <div class="overlay" id="yoru">
+            <a href="#" class="close">x close</a>
+            <a href="#deadlock" class="prev">prev</a>
+            <img src="img/full/yoru.png" alt="YORU" />
+            <a href="#chamber" class="next">next</a>
+          </div>
+        </li>
+        <li>
+          <a href="#chamber">
+            <img src="img/thumbs/chamber.png" alt="CHAMBER" class="chamber" />
+            <span>CHAMBER</span>
+          </a>
+
+          <div class="overlay" id="chamber">
+            <a href="#" class="close">x close</a>
+            <a href="#yoru" class="prev">prev</a>
+            <img src="img/full/chamber.png" alt="CHAMBER" />
+            <a href="#gekko" class="next">next</a>
+          </div>
+        </li>
+        <li>
+          <a href="#gekko">
+            <img src="img/thumbs/gekko.png" alt="GEKKO" class="gekko" />
+            <span>GEKKO</span>
+          </a>
+
+          <div class="overlay" id="gekko">
+            <a href="#" class="close">x close</a>
+            <a href="#chamber" class="prev">prev</a>
+            <img src="img/full/gekko.png" alt="GEKKO" />
+            <a href="#deadlock" class="next">next</a>
+          </div>
+        </li>
+        <li>
+          <a href="#deadlock">
+            <img
+              src="img/thumbs/deadlock.png"
+              alt="DEADLOCK"
+              class="deadlock"
+            />
+            <span>DEADLOCK</span>
+          </a>
+
+          <div class="overlay" id="deadlock">
+            <a href="#" class="close">x close</a>
+            <a href="#gekko" class="prev">prev</a>
+            <img src="img/full/deadlock.png" alt="DEADLOCK" />
+            <a href="#yoru" class="next">next</a>
+          </div>
+        </li>
+        <div class="clear"></div>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+.container {
+    width: 600px;
+    height: 600px;
+    margin: 100px auto;
+    border: 10px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    float: left;    
+}
